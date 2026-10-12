@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smile Studio Dental</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0">
+
+<!-- Theme 1 variables are the default; the switcher at the bottom right swaps them -->
+<div id="app" style="--bg: #F8F7F2; --surface: #FFFFFF; --primary: #7357D8; --on-primary: #FFFFFF; --accent: #FFD84D; --on-accent: #2A2060; --ink: #2A2060; --line: #E6E2D4; font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; overflow: hidden">
+
+<!-- THEME SWITCHER -->
+<div role="group" aria-label="Colour theme" style="position: fixed; right: 16px; bottom: 16px; z-index: 50; display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1.5px solid var(--line); border-radius: 999px; padding: 8px 10px 8px 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.18)">
+<span style="font-size: 13px; font-weight: 700; color: var(--ink)">Theme</span>
+<button id="tb0" type="button" onclick="applyTheme(0)" aria-label="Theme 1: purple, yellow and off-white" title="Theme 1" aria-pressed="true" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--surface); padding: 0; cursor: pointer; background: conic-gradient(#7357D8 0 33.3%, #FFD84D 0 66.6%, #F8F7F2 0)"></button>
+<button id="tb1" type="button" onclick="applyTheme(1)" aria-label="Theme 2: blue, red and sand yellow" title="Theme 2" aria-pressed="false" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--surface); padding: 0; cursor: pointer; background: conic-gradient(#5B7CFA 0 33.3%, #E94B4B 0 66.6%, #FFE7A3 0)"></button>
+<button id="tb2" type="button" onclick="applyTheme(2)" aria-label="Theme 3: blue, orange and cream" title="Theme 3" aria-pressed="false" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--surface); padding: 0; cursor: pointer; background: conic-gradient(#185ADB 0 33.3%, #FF8A3D 0 66.6%, #F5F1E8 0)"></button>
+<button id="tb3" type="button" onclick="applyTheme(3)" aria-label="Theme 4: violet, mint and cream" title="Theme 4" aria-pressed="false" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--surface); padding: 0; cursor: pointer; background: conic-gradient(#593C8F 0 33.3%, #A8D5BA 0 66.6%, #FAF6EE 0)"></button>
+</div>
+
+<!-- NAV + HERO -->
+<div style="position: relative; width: 100%; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; width: 520px; height: 520px; border-radius: 50%; background: var(--accent); opacity: 0.35; right: -140px; top: -160px"></div>
+<div aria-hidden="true" style="position: absolute; width: 260px; height: 260px; border-radius: 50%; background: var(--accent); opacity: 0.22; left: -90px; bottom: -60px"></div>
+<div style="position: relative; max-width: 1160px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 0">
+<div style="display: flex; align-items: center; gap: 10px">
+<div style="width: 42px; height: 42px; border-radius: 14px; background: var(--primary); color: var(--on-primary); display: flex; align-items: center; justify-content: center">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 3c-2 0-4 2-4 5 0 4 2 5 2.5 9 .3 2 1 4 2 4s1.2-3 2-3 1.2 3 2 3 1.7-2 2-4c.5-4 2.5-5 2.5-9 0-3-2-5-4-5-1.5 0-2 .8-3 .8S8.5 3 7 3z"/></svg>
+</div>
+<span style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; color: var(--ink)">Smile Studio</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+<a href="#services" style="color: var(--ink); text-decoration: none; font-weight: 500">Services</a>
+<a href="#process" style="color: var(--ink); text-decoration: none; font-weight: 500">How it works</a>
+<a href="#doctor" style="color: var(--ink); text-decoration: none; font-weight: 500">Our doctor</a>
+<a href="#book" style="background: var(--primary); color: var(--on-primary); text-decoration: none; font-weight: 700; padding: 12px 24px; border-radius: 999px">Book appointment</a>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px; padding: 48px 0 96px">
+<div style="flex: 1 1 440px; min-width: 0">
+<div style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 14px; padding: 8px 16px; border-radius: 999px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>
+Family dental care
+</div>
+<h1 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 64px; line-height: 1.02; margin: 22px 0 22px; letter-spacing: -0.02em; color: var(--ink)">Healthy teeth, calm visits, a <span style="background: linear-gradient(transparent 62%, var(--accent) 62%, var(--accent) 92%, transparent 92%)">smile you love</span> to show.</h1>
+<p style="font-size: 19px; margin: 0 0 34px; max-width: 520px">Gentle checkups, whitening, braces and implants, all in one clinic. Tell us what's bothering you and we'll explain every step before we start.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<a href="#book" style="background: var(--primary); color: var(--on-primary); text-decoration: none; font-weight: 700; padding: 17px 32px; border-radius: 999px; font-size: 17px; box-shadow: 0 10px 24px rgba(0,0,0,0.2)">Book a visit</a>
+<a href="#services" style="background: var(--accent); color: var(--on-accent); text-decoration: none; font-weight: 700; padding: 17px 32px; border-radius: 999px; font-size: 17px">See treatments</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 38px; font-weight: 500">
+<div style="display: flex; align-items: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Sterilised instruments</div>
+<div style="display: flex; align-items: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Painless-first approach</div>
+<div style="display: flex; align-items: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Clear pricing upfront</div>
+</div>
+</div>
+
+<div style="flex: 1 1 340px; min-width: 0; display: flex; justify-content: center">
+<div style="position: relative; width: 100%; max-width: 440px; aspect-ratio: 1 / 1">
+<div style="position: absolute; inset: 0; border-radius: 160px 160px 48px 160px; background: var(--primary); color: var(--on-primary); display: flex; align-items: center; justify-content: center">
+<svg width="58%" height="58%" viewBox="0 0 24 24" fill="currentColor" style="stroke: var(--accent)" stroke-width="0.5" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2 0-4 2-4 5 0 4 2 5 2.5 9 .3 2 1 4 2 4s1.2-3 2-3 1.2 3 2 3 1.7-2 2-4c.5-4 2.5-5 2.5-9 0-3-2-5-4-5-1.5 0-2 .8-3 .8S8.5 3 7 3z"/></svg>
+</div>
+<div aria-hidden="true" style="position: absolute; width: 74px; height: 74px; border-radius: 50%; background: var(--accent); right: -18px; top: 28px"></div>
+<div style="position: absolute; left: -20px; bottom: 44px; background: var(--surface); color: var(--ink); border-radius: 20px; padding: 14px 18px; box-shadow: 0 14px 34px rgba(0,0,0,0.2)">
+<div style="font-size: 13px; font-weight: 500">Next available slot</div>
+<div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 19px">[DATE] · [TIME]</div>
+</div>
+<div style="position: absolute; right: -10px; bottom: -16px; background: var(--accent); color: var(--on-accent); border-radius: 20px; padding: 12px 18px; display: flex; align-items: center; gap: 10px; font-weight: 700">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>
+Gentle &amp; painless
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- BAND -->
+<div style="background: var(--primary); width: 100%">
+<div style="max-width: 1160px; margin: 0 auto; padding: 20px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 26px; color: var(--on-primary); font-family: 'Fraunces', serif; font-weight: 600; font-size: 20px">
+<span>Checkups</span><span aria-hidden="true" style="color: var(--accent)">&#9679;</span>
+<span>Whitening</span><span aria-hidden="true" style="color: var(--accent)">&#9679;</span>
+<span>Braces</span><span aria-hidden="true" style="color: var(--accent)">&#9679;</span>
+<span>Root canal</span><span aria-hidden="true" style="color: var(--accent)">&#9679;</span>
+<span>Implants</span><span aria-hidden="true" style="color: var(--accent)">&#9679;</span>
+<span>Kids' care</span>
+</div>
+</div>
+
+<!-- SERVICES -->
+<div id="services" style="width: 100%">
+<div style="max-width: 1160px; margin: 0 auto; padding: 96px 24px; box-sizing: border-box">
+<div style="max-width: 640px">
+<div style="display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px">Treatments</div>
+<h2 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 44px; line-height: 1.1; margin: 16px 0 14px; letter-spacing: -0.01em">Everything your family's teeth need</h2>
+<p style="margin: 0; font-size: 18px">From the routine to the complex, handled by one team that already knows your history.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 22px; margin-top: 48px">
+<div style="flex: 1 1 300px; min-width: 0; background: var(--surface); border-radius: 28px; padding: 30px; box-sizing: border-box; border: 1.5px solid var(--line)">
+<div style="width: 58px; height: 58px; border-radius: 20px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+</div>
+<h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin: 20px 0 8px">Checkup &amp; cleaning</h3>
+<p style="margin: 0">A thorough exam, scaling and polish to catch small problems early and keep gums healthy.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; background: var(--surface); border-radius: 28px; padding: 30px; box-sizing: border-box; border: 1.5px solid var(--line)">
+<div style="width: 58px; height: 58px; border-radius: 20px; background: var(--primary); color: var(--on-primary); display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17v4M17 19h4"/></svg>
+</div>
+<h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin: 20px 0 8px">Teeth whitening</h3>
+<p style="margin: 0">Safe, supervised whitening that lifts stains from tea, coffee and everyday wear.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; background: var(--surface); border-radius: 28px; padding: 30px; box-sizing: border-box; border: 1.5px solid var(--line)">
+<div style="width: 58px; height: 58px; border-radius: 20px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14c1 2 2.5 3 4 3s3-1 4-3"/><path d="M9 9.5h.01M15 9.5h.01"/></svg>
+</div>
+<h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin: 20px 0 8px">Braces &amp; aligners</h3>
+<p style="margin: 0">Straighter teeth with metal, ceramic or clear options, planned around your age and lifestyle.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; background: var(--surface); border-radius: 28px; padding: 30px; box-sizing: border-box; border: 1.5px solid var(--line)">
+<div style="width: 58px; height: 58px; border-radius: 20px; background: var(--primary); color: var(--on-primary); display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2 0-4 2-4 5 0 4 2 5 2.5 9 .3 2 1 4 2 4s1.2-3 2-3 1.2 3 2 3 1.7-2 2-4c.5-4 2.5-5 2.5-9 0-3-2-5-4-5-1.5 0-2 .8-3 .8S8.5 3 7 3z"/></svg>
+</div>
+<h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin: 20px 0 8px">Root canal treatment</h3>
+<p style="margin: 0">Save a badly infected tooth with careful, well-numbed treatment and a lasting crown.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; background: var(--surface); border-radius: 28px; padding: 30px; box-sizing: border-box; border: 1.5px solid var(--line)">
+<div style="width: 58px; height: 58px; border-radius: 20px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+</div>
+<h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin: 20px 0 8px">Dental implants</h3>
+<p style="margin: 0">Replace missing teeth with fixtures that look, feel and work like your own.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; background: var(--surface); border-radius: 28px; padding: 30px; box-sizing: border-box; border: 1.5px solid var(--line)">
+<div style="width: 58px; height: 58px; border-radius: 20px; background: var(--primary); color: var(--on-primary); display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>
+</div>
+<h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin: 20px 0 8px">Kids' dentistry</h3>
+<p style="margin: 0">Friendly first visits, fluoride care and cavity prevention so children grow up unafraid.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PROCESS -->
+<div id="process" style="background: var(--primary); width: 100%; position: relative; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; width: 380px; height: 380px; border-radius: 50%; background: var(--accent); opacity: 0.18; right: -120px; top: -120px"></div>
+<div style="position: relative; max-width: 1160px; margin: 0 auto; padding: 96px 24px; box-sizing: border-box; color: var(--on-primary)">
+<div style="display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px">How it works</div>
+<h2 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 44px; line-height: 1.1; margin: 16px 0 48px; letter-spacing: -0.01em">Three simple steps to a better smile</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 36px">
+<div style="flex: 1 1 280px; min-width: 0">
+<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-family: 'Fraunces', serif; font-weight: 700; font-size: 26px; display: flex; align-items: center; justify-content: center">1</div>
+<h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin: 20px 0 8px">Book online or call</h3>
+<p style="margin: 0">Pick a time that suits you. We'll confirm by phone or message.</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0">
+<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-family: 'Fraunces', serif; font-weight: 700; font-size: 26px; display: flex; align-items: center; justify-content: center">2</div>
+<h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin: 20px 0 8px">Exam and a clear plan</h3>
+<p style="margin: 0">We check, explain what we find and share the cost before any treatment begins.</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0">
+<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-family: 'Fraunces', serif; font-weight: 700; font-size: 26px; display: flex; align-items: center; justify-content: center">3</div>
+<h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin: 20px 0 8px">Comfortable treatment</h3>
+<p style="margin: 0">Gentle care, aftercare instructions and a follow-up so you're never left guessing.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- DOCTOR -->
+<div id="doctor" style="width: 100%">
+<div style="max-width: 1160px; margin: 0 auto; padding: 96px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 64px">
+<div style="flex: 1 1 300px; min-width: 0; max-width: 420px">
+<div style="position: relative">
+<div aria-hidden="true" style="position: absolute; inset: 20px -20px -20px 20px; border-radius: 40px; background: var(--accent)"></div>
+<div style="position: relative; width: 100%; aspect-ratio: 4 / 5; border-radius: 40px; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--on-primary); font-weight: 700">[DOCTOR PHOTO]</div>
+</div>
+</div>
+<div style="flex: 1 1 420px; min-width: 0">
+<div style="display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px">Meet your dentist</div>
+<h2 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 44px; line-height: 1.1; margin: 16px 0 10px; letter-spacing: -0.01em">Dr. [DOCTOR NAME]</h2>
+<div style="font-weight: 700; margin-bottom: 18px">[QUALIFICATION] · [YEARS] years of practice</div>
+<p style="margin: 0 0 14px; font-size: 18px">[Two or three lines about the doctor's training, approach to patients and areas of special interest. Replace with real details.]</p>
+<p style="margin: 0; font-size: 18px">[One line on what patients can expect at their first visit.]</p>
+</div>
+</div>
+</div>
+
+<!-- BOOKING -->
+<div id="book" style="background: var(--accent); width: 100%">
+<div style="max-width: 1160px; margin: 0 auto; padding: 96px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 360px; min-width: 0; color: var(--on-accent)">
+<h2 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 46px; line-height: 1.08; margin: 0 0 18px; letter-spacing: -0.01em">Ready for a check-up?</h2>
+<p style="margin: 0 0 12px; font-size: 18px">Leave your details and we'll call to confirm a time that works for you.</p>
+<p style="margin: 0; font-size: 18px; font-weight: 700">Dental pain? Call us directly on [PHONE NUMBER].</p>
+</div>
+<form onsubmit="event.preventDefault(); alert('Thank you! We will call you to confirm your appointment.');" style="flex: 1 1 360px; min-width: 0; background: var(--surface); color: var(--ink); border-radius: 32px; padding: 34px; box-sizing: border-box; box-shadow: 0 20px 50px rgba(0,0,0,0.2); margin: 0">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-name" style="font-weight: 700">Full name</label>
+<input id="f-name" type="text" required placeholder="Your name" style="font-family: inherit; font-size: 16px; color: var(--ink); padding: 14px 16px; border: 1.5px solid var(--ink); border-radius: 16px; background: #FFFFFF; min-height: 22px">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-phone" style="font-weight: 700">Phone number</label>
+<input id="f-phone" type="tel" required placeholder="Mobile number" style="font-family: inherit; font-size: 16px; color: var(--ink); padding: 14px 16px; border: 1.5px solid var(--ink); border-radius: 16px; background: #FFFFFF; min-height: 22px">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-treat" style="font-weight: 700">Treatment</label>
+<select id="f-treat" style="font-family: inherit; font-size: 16px; color: var(--ink); padding: 14px 16px; border: 1.5px solid var(--ink); border-radius: 16px; background: #FFFFFF; min-height: 22px">
+<option>Checkup &amp; cleaning</option>
+<option>Teeth whitening</option>
+<option>Braces &amp; aligners</option>
+<option>Root canal treatment</option>
+<option>Dental implants</option>
+<option>Kids' dentistry</option>
+<option>Not sure yet</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-date" style="font-weight: 700">Preferred date</label>
+<input id="f-date" type="date" style="font-family: inherit; font-size: 16px; color: var(--ink); padding: 14px 16px; border: 1.5px solid var(--ink); border-radius: 16px; background: #FFFFFF; min-height: 22px">
+</div>
+<button type="submit" style="font-family: inherit; font-size: 17px; font-weight: 700; background: var(--primary); color: var(--on-primary); border: 0; border-radius: 999px; padding: 16px 30px; min-height: 54px; cursor: pointer">Request appointment</button>
+</div>
+</form>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div style="width: 100%; background: var(--primary); color: var(--on-primary)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 60px 24px 90px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between">
+<div style="flex: 1 1 260px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 10px">
+<div style="width: 38px; height: 38px; border-radius: 12px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 3c-2 0-4 2-4 5 0 4 2 5 2.5 9 .3 2 1 4 2 4s1.2-3 2-3 1.2 3 2 3 1.7-2 2-4c.5-4 2.5-5 2.5-9 0-3-2-5-4-5-1.5 0-2 .8-3 .8S8.5 3 7 3z"/></svg>
+</div>
+<span style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px">Smile Studio</span>
+</div>
+<p style="margin: 14px 0 0">Gentle dental care for the whole family.</p>
+</div>
+<div style="flex: 1 1 220px; min-width: 0">
+<div style="font-weight: 700; margin-bottom: 8px; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 6px; text-decoration-thickness: 3px">Visit us</div>
+<div>[CLINIC ADDRESS]<br>[CITY, PIN CODE]</div>
+</div>
+<div style="flex: 1 1 220px; min-width: 0">
+<div style="font-weight: 700; margin-bottom: 8px; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 6px; text-decoration-thickness: 3px">Timings</div>
+<div>Mon to Sat: [OPENING HOURS]<br>Sunday: [OPENING HOURS]</div>
+</div>
+<div style="flex: 1 1 220px; min-width: 0">
+<div style="font-weight: 700; margin-bottom: 8px; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 6px; text-decoration-thickness: 3px">Contact</div>
+<div>[PHONE NUMBER]<br>[EMAIL ADDRESS]</div>
+</div>
+</div>
+<div style="margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--accent); font-size: 14px">Demo page. Replace the bracketed placeholders with your clinic's real details.</div>
+</div>
+</div>
+
+</div>
+
+<script>
+var THEMES = [
+  { "--bg": "#F8F7F2", "--surface": "#FFFFFF", "--primary": "#7357D8", "--on-primary": "#FFFFFF", "--accent": "#FFD84D", "--on-accent": "#2A2060", "--ink": "#2A2060", "--line": "#E6E2D4" },
+  { "--bg": "#FFE7A3", "--surface": "#FFF5D6", "--primary": "#5B7CFA", "--on-primary": "#101530", "--accent": "#E94B4B", "--on-accent": "#101530", "--ink": "#101530", "--line": "#F0D98A" },
+  { "--bg": "#F5F1E8", "--surface": "#FFFFFF", "--primary": "#185ADB", "--on-primary": "#FFFFFF", "--accent": "#FF8A3D", "--on-accent": "#10264F", "--ink": "#10264F", "--line": "#E4DCC8" },
+  { "--bg": "#FAF6EE", "--surface": "#FFFFFF", "--primary": "#593C8F", "--on-primary": "#FFFFFF", "--accent": "#A8D5BA", "--on-accent": "#2E1F52", "--ink": "#2E1F52", "--line": "#E6DDCB" }
+];
+
+function applyTheme(i) {
+  var app = document.getElementById("app");
+  var t = THEMES[i];
+  for (var k in t) { app.style.setProperty(k, t[k]); }
+  for (var j = 0; j < THEMES.length; j++) {
+    var b = document.getElementById("tb" + j);
+    b.setAttribute("aria-pressed", j === i ? "true" : "false");
+    b.style.outline = j === i ? "3px solid var(--ink)" : "none";
+    b.style.outlineOffset = "2px";
+  }
+  try { localStorage.setItem("smile-theme", String(i)); } catch (e) {}
+}
+
+(function () {
+  var saved = 0;
+  try {
+    var s = parseInt(localStorage.getItem("smile-theme"), 10);
+    if (s >= 0 && s < THEMES.length) { saved = s; }
+  } catch (e) {}
+  applyTheme(saved);
+})();
+</script>
+</body>
+</html>
